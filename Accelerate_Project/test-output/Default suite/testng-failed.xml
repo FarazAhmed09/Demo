@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Letskode.RestExample">
+      <class name="Letskode.Uploadfile">
         <methods>
           <include name="f"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- Letskode.RestExample -->
+      </class> <!-- Letskode.Uploadfile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

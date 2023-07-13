@@ -2,6 +2,7 @@ package Letskode;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,11 +20,12 @@ public class Uploadfile {
 
 		driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("iphone 14");
 		
-		Actions act = new Actions(driver);
-		act.click(driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]"))).perform();
+		driver.findElement(By.id("nav-search-submit-button")).sendKeys(Keys.ENTER);
+		//Actions act = new Actions(driver);
+		//act.click(driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]"))).perform();
 		Assert.assertEquals(driver.getTitle(), "Amazon.in : iphone 14");
 		
-		act.moveToElement(driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]"))).perform();
+		//act.moveToElement(driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]"))).perform();
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
 		System.out.println("Wrong input given");
